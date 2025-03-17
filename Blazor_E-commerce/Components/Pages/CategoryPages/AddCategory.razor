@@ -1,0 +1,16 @@
+﻿@page "/addcategory"
+
+<h3>AddCategory</h3>
+
+<EditForm EditContext="_editContext" OnValidSubmit="Save">
+	<div class="input-group input-group-lg">
+		<span class="input-group-text">Name</span>
+		<InputText class="form-control" id="txtName" @bind-Value="newCategory.Title" />
+		<ValidationMessage For="@(() => newCategory.Title)" />
+	</div>
+	<br />
+	<button type="submit" class="btn btn-lg btn-outline-primary">Insert new Product</button>
+</EditForm>
+<br />
+<a href="/categories" class="btn btn-outline-secondary">Go Back</a>
+

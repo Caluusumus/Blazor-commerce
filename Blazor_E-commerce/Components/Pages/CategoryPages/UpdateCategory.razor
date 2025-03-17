@@ -1,0 +1,14 @@
+﻿@page "/updateCategory/{Id:int}"
+<h3>UpdateCategory</h3>
+
+<EditForm EditContext="_editContext" OnValidSubmit="Update">
+	<div class="input-group input-group-lg">
+		<span class="input-group-text">Title</span>
+		<InputText class="form-control" id="txtName" @bind-Value="newCategory.Title" />
+		<ValidationMessage For="@(() => newCategory.Title)" />
+	</div>
+	<br />
+	<button type="submit" class="btn btn-lg btn-outline-warning">Update Product</button>
+</EditForm>
+<br />
+<a href="/categories" class="btn btn-outline-secondary">Go Back</a>
