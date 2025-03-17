@@ -1,8 +1,7 @@
-using Blazor_E_commerce.Client.Pages;
 using Blazor_E_commerce.Components;
 using Blazor_E_commerce.Components.Account;
 using Blazor_E_commerce.Data;
-using Blazor_E_commerce.Services;
+using Blazor_E_commerce.Services.UserServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,8 +14,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
-
-builder.Services.AddScoped<IMailSender, MailSender>();
+builder.Services.AddScoped<IUserService,UserService>();
 
 builder.Services.AddAuthentication(options =>
     {
